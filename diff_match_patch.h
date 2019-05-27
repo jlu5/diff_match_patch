@@ -260,7 +260,7 @@ class diff_match_patch {
    *     encoded text2 and the List of unique strings.  The zeroth element
    *     of the List of unique strings is intentionally blank.
    */
- protected:
+ public:
   std::tuple<std::wstring, std::wstring, std::vector<std::wstring> >
       diff_linesToChars(const std::wstring &text1,
                         const std::wstring &text2) const;  // return elems 0
@@ -287,7 +287,7 @@ class diff_match_patch {
    * @param diffs LinkedList of Diff objects.
    * @param lineArray List of unique strings.
    */
- private:
+ public:
   void diff_charsToLines(std::list<Diff> &diffs,
                          const std::vector<std::wstring> &lineArray);
 
